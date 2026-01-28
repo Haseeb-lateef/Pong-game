@@ -1,5 +1,6 @@
 from turtle import Screen
 from paddle import Paddle
+from ball import Ball
 
 
 #screen set up
@@ -13,6 +14,7 @@ my_screen.tracer(0)
 #creates paddles
 l_paddle = Paddle((-350,0))
 r_paddle = Paddle((350,0))
+ball = Ball()
 
 
 #controls movement for left and right paddles
