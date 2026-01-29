@@ -1,6 +1,7 @@
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from time import sleep
 
 
 #screen set up
@@ -17,6 +18,7 @@ r_paddle = Paddle((350,0))
 ball = Ball()
 
 
+
 #controls movement for left and right paddles
 my_screen.listen()
 my_screen.onkey(l_paddle.up, "w")
@@ -28,8 +30,14 @@ my_screen.onkey(r_paddle.down, "Down")
 
 game_on = True
 
+
 while game_on:
+
+    ball.float()
     my_screen.update()
+    sleep(0.1)
+
+
 
 
 my_screen.exitonclick()

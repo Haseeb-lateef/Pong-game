@@ -11,6 +11,7 @@ class Paddle(Turtle):
         self.shape("square")
         self.shapesize(5,1)
         self.color("white")
+        self.speed(1)
 
     def up(self):
         y= self.ycor() +20

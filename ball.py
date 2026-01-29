@@ -1,4 +1,5 @@
 from turtle import Turtle
+import random
 
 class Ball(Turtle):
 
@@ -9,3 +10,10 @@ class Ball(Turtle):
         self.penup()
         self.goto(0,0)
         self.shapesize(1,1)
+
+
+    def float(self):
+        x = self.xcor() + 10
+        y = self.ycor() + 10
+        self.goto(x,y)
+
