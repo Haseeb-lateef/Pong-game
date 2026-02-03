@@ -33,9 +33,15 @@ game_on = True
 
 while game_on:
 
+
+
     ball.float()
+
+    ball.bounce_back()
+
     my_screen.update()
     sleep(0.1)
+
 
 
 

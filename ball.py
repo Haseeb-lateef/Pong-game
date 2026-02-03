@@ -10,10 +10,28 @@ class Ball(Turtle):
         self.penup()
         self.goto(0,0)
         self.shapesize(1,1)
+        self.move_x = 10
+        self.move_y = 10
+
 
 
     def float(self):
-        x = self.xcor() + 10
-        y = self.ycor() + 10
-        self.goto(x,y)
+        self.goto(self.xcor() + self.move_x, self.ycor() + self.move_y)
+
+    def detect_border(self):
+
+        if self.ycor() > 275 or self.ycor() < -275 :
+            return True
+        return False
+
+
+    def bounce_back(self):
+
+        if self.detect_border():
+            self.move_y *=-1
+
+
+
+
+
 
