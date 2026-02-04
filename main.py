@@ -37,7 +37,11 @@ while game_on:
 
     ball.float()
 
-    ball.bounce_back()
+    if ball.detect_border():
+        ball.bounce_y()
+
+    ball.paddle_bounce(r_paddle,l_paddle)
+    ball.out_of_bounds()
 
     my_screen.update()
     sleep(0.1)
