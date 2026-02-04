@@ -14,12 +14,18 @@ class Paddle(Turtle):
         self.speed(1)
 
     def up(self):
-        y= self.ycor() +20
-        self.goto(self.xcor(),y)
+        if self.ycor() > 220:
+            return
+        else:
+            y= self.ycor() +20
+            self.goto(self.xcor(),y)
 
     def down(self):
-        y= self.ycor() -20
-        self.goto(self.xcor(),y)
+        if self.ycor() > 220:
+            return
+        else:
+            y= self.ycor() -20
+            self.goto(self.xcor(),y)
 
 
 
